@@ -78,7 +78,19 @@ java -version
 ### 3) Network / proxy issues downloading dependencies
 If Gradle cannot download dependencies, configure proxy in `~/.gradle/gradle.properties`.
 
+## Build & Run
+1. Open project in **Android Studio Iguana+**.
+2. Ensure Android SDK 35 is installed.
+3. Sync Gradle.
+4. Run app on physical device (camera required) or emulator with virtual camera support.
+
+### CLI build
+```bash
+./gradlew :app:assembleDebug
+```
+
 ## Notes
 - URL safety warnings are shown for suspicious or malformed hosts before launching.
 - Scanning is designed to work offline once app dependencies are installed.
 - Extend `ResultScreen` with richer native handlers (Wi-Fi connect / contact save) as needed by OEM policy and permissions.
+
